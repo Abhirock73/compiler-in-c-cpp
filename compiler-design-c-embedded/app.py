@@ -10,8 +10,10 @@ code = st.text_area("Code Editor", height=300)
 
 if st.button("Run Compiler"):
 
-    if not os.path.exists("compiler.exe"):
-        st.error("compiler.exe not found. Please make sure it is in this folder.")
+    if not os.path.exists("compiler"):
+        subprocess.run(
+            ["g++","file_opener.cpp","parser.cpp","scanner.cpp","semantics.cpp","-o","compiler"]
+        )
     
     elif code.strip() == "":
         st.warning("Please enter some code")
