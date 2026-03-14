@@ -38,7 +38,7 @@ if st.button("Run Compiler"):
 
         try:
             result = subprocess.run(
-                ["./compiler", source_file],
+                ["compiler-design-c-embedded/compiler", source_file],
                 capture_output=True,
                 text=True
             )
