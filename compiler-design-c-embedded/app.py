@@ -36,8 +36,8 @@ if st.button("Run Compiler"):
             output = result.stdout
             errors = result.stderr
 
-            st.subheader("Compiler Output")
-            st.code(output if output else "No output")
+            st.subheader("Compiler Error")
+            st.code(output if output else "No Error")
 
             # detect error in compiler output
             error_keywords = ["error","invalid","syntax","semantic","lexical","brace","incompatible"]
